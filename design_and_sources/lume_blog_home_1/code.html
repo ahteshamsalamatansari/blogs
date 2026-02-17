@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#ffb59e",
+                        "on-tertiary-fixed": "#27180f",
+                        "background": "#fef9f2",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#d97757",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-primary-container": "#541400",
+                        "primary-fixed": "#ffdbd0",
+                        "on-error": "#ffffff",
+                        "outline": "#88726c",
+                        "tertiary-fixed-dim": "#dcc1b3",
+                        "surface-container-low": "#f8f3ec",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#99462a",
+                        "on-secondary-container": "#793f25",
+                        "on-primary-fixed": "#390b00",
+                        "tertiary": "#6f5a4e",
+                        "on-surface": "#1d1b17",
+                        "surface-variant": "#e7e2db",
+                        "secondary-fixed-dim": "#ffb596",
+                        "on-surface-variant": "#55433d",
+                        "surface": "#fef9f2",
+                        "on-secondary-fixed-variant": "#6f371e",
+                        "surface-container-high": "#ece7e1",
+                        "on-primary-fixed-variant": "#7a2f15",
+                        "surface-dim": "#ded9d3",
+                        "surface-bright": "#fef9f2",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e7e2db",
+                        "on-background": "#1d1b17",
+                        "secondary": "#8c4e33",
+                        "primary": "#99462a",
+                        "inverse-on-surface": "#f5f0e9",
+                        "inverse-primary": "#ffb59e",
+                        "outline-variant": "#dbc1b9",
+                        "on-secondary-fixed": "#360f00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#f2ede6",
+                        "tertiary-fixed": "#f9ddce",
+                        "secondary-container": "#feae8c",
+                        "inverse-surface": "#32302c",
+                        "tertiary-container": "#a58d80",
+                        "on-tertiary-fixed-variant": "#564338",
+                        "on-tertiary-container": "#37271d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "section-gap": "80px",
+                        "container-max": "1120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f6f1ea;
+            scroll-behavior: smooth;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+        @media (min-width: 768px) {
+            .editorial-grid {
+                grid-template-columns: repeat(12, 1fr);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopAppBar Section -->
+<header class="sticky top-0 w-full bg-background border-b border-outline-variant/30 z-50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface">LUME</h1>
+</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-title-lg text-title-lg text-primary font-medium hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Home</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Archive</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer" href="#">About</a>
+</nav>
+<div class="flex items-center">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container rounded-full transition-colors" data-icon="search">search</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Hero Section -->
+<section class="mb-section-gap">
+<div class="max-w-3xl">
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-4 block">Editorial Journal</span>
+<h2 class="font-display-lg text-display-lg mb-6 leading-tight">The quiet beauty of functional spaces.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Exploring the intersection of minimalist architecture, sustainable design, and the intentional lifestyle. We celebrate the "less but better" philosophy through visual storytelling.</p>
+</div>
+</section>
+<!-- Blog Feed Grid -->
+<div class="editorial-grid">
+<!-- Article 1: Large Featured Card -->
+<article class="md:col-span-12 group cursor-pointer">
+<div class="bg-surface-container rounded-xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 overflow-hidden aspect-[4/3] md:aspect-auto">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean and minimalist concrete architecture structure featuring sharp geometric lines and soft natural sunlight casting long shadows. The setting is a serene coastal environment with a pale blue sky, reflecting a warm light-mode aesthetic with creamy whites and soft sand tones. The atmosphere is peaceful and sophisticated, echoing high-end editorial photography found in luxury design magazines." src=""/>
+</div>
+<div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-surface-container">
+<span class="font-label-lg text-label-lg text-primary mb-4 block">Architecture</span>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-on-surface group-hover:text-primary transition-colors">The Monolith: Concrete in the Natural Landscape</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">How raw materials are being redefined to create sanctuaries that blend seamlessly with the rugged textures of the wild.</p>
+<div class="flex items-center gap-2 text-primary-container font-bold">
+<span class="font-label-lg text-label-lg">Read Article</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Article 2: Standard Bento Card -->
+<article class="md:col-span-6 group cursor-pointer">
+<div class="bg-[#f3d7c8] p-8 md:p-10 rounded-xl h-full flex flex-col transition-all duration-300 hover:translate-y-[-4px]">
+<div class="mb-8 aspect-video overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An interior shot of a minimalist living room featuring a single designer chair made of light wood and tan leather. The room is bathed in golden hour light filtered through linen curtains, creating a soft and warm atmosphere. The walls are a textured off-white, and the overall color palette consists of warm browns, beiges, and subtle terracotta accents, embodying an ultra-minimalist editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI-Cs5LaswB-w0J7AbRRY_zVAl4kAgldW2dZHvaUPW6c1NnBdNC0TLba_RNtwG_mSpMVFhiKtiBPwOOBlTRNVu_lSrtb0EJmWbhE9m06YHjjvImK-MYssTAK4yK2CxSFIZ03sA99WCZroVYj36aM7for-GeoxOff7ebnxnh8tZKywMoNVz04OrUCVHAxmRY299BNwxN9rJPtZD-M8CU46iCERKxomLBduR3QB4rAu3K4LJVdFrhqZtovhcaVDNcaXxqupuques6XXb"/>
+</div>
+<span class="font-label-lg text-label-lg text-primary mb-2 block">Interior Design</span>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-on-surface">The Psychology of Empty Space</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Why removing visual clutter can significantly lower cortisol levels and improve cognitive focus in the modern home office.</p>
+<div class="mt-auto">
+<span class="text-primary-container font-bold font-label-lg text-label-lg group-hover:underline decoration-2 underline-offset-4 transition-all">Read Article</span>
+</div>
+</div>
+</article>
+<!-- Article 3: Standard Bento Card -->
+<article class="md:col-span-6 group cursor-pointer">
+<div class="bg-[#f3d7c8] p-8 md:p-10 rounded-xl h-full flex flex-col transition-all duration-300 hover:translate-y-[-4px]">
+<div class="mb-8 aspect-video overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro photograph of sustainable building materials including reclaimed oak wood, smooth river stones, and recycled glass tiles arranged in a pleasing layout. The lighting is high-key and bright, highlighting the natural textures and organic patterns of the materials. The color scheme is rooted in earthy neutrals with soft terracotta highlights, reflecting a clean and modern design philosophy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANEtcLEiHyeuKcV7r2XpNMPwRLL7NxiKi9sFHdhBLFjR2tjevAS8JDl4cauf08mdqL2d-pGA5dJJJMzc6FmJ9ocgINNJl1ZKl6JBLhjnWi5NhHiQ5lqWF3BnS-aDU3ivNg_byoHbAgRmQk9pjsq_EuEofBzWeh4vr85dILfdkeUO73bRAM9OgLRT0aGxlzQyiDXq13uuY70Q4De5hg45HiF6HYLJI_8g71IQfeYCmi10w1Ei6MWHtjWzqP3riE14i2ssmQFpaMtuNd"/>
+</div>
+<span class="font-label-lg text-label-lg text-primary mb-2 block">Sustainability</span>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Tactile Sustainability: Material Honesty</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Moving beyond the aesthetic of green to the reality of lifecycle assessment in modern residential construction.</p>
+<div class="mt-auto">
+<span class="text-primary-container font-bold font-label-lg text-label-lg group-hover:underline decoration-2 underline-offset-4 transition-all">Read Article</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Newsletter Section -->
+<section class="mt-section-gap bg-surface-container-high rounded-xl p-8 md:p-16 text-center max-w-4xl mx-auto">
+<h4 class="font-headline-lg text-headline-lg mb-4">The Weekly Edit</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Curated thoughts on design, delivered directly to your inbox every Sunday morning.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-grow bg-surface-bright border-b-2 border-outline-variant focus:border-primary-container outline-none px-4 py-3 font-body-md transition-all rounded-none" placeholder="email@address.com" type="email"/>
+<button class="bg-primary-container text-white px-8 py-3 font-label-lg text-label-lg font-bold rounded-lg hover:opacity-90 transition-opacity">Subscribe</button>
+</form>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">LUME</h2>
+<p class="font-label-lg text-label-lg text-on-tertiary-fixed-variant">© 2024 Lume Editorial. All rights reserved.</p>
+</div>
+<nav class="flex gap-gutter">
+<a class="font-label-lg text-label-lg text-primary font-bold hover:text-primary transition-colors duration-300 ease-in-out" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">Privacy</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">Archive</a>
+</nav>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span></a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('article');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                card.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

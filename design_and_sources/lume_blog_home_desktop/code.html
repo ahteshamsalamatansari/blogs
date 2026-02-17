@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lume | Editorial Minimalist Blog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#a58d80",
+                    "surface-variant": "#e7e2db",
+                    "on-tertiary-fixed": "#27180f",
+                    "surface-container-low": "#f8f3ec",
+                    "outline-variant": "#dbc1b9",
+                    "inverse-surface": "#32302c",
+                    "surface-tint": "#99462a",
+                    "secondary-fixed-dim": "#ffb596",
+                    "primary-fixed": "#ffdbd0",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#7a2f15",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#37271d",
+                    "primary-fixed-dim": "#ffb59e",
+                    "outline": "#88726c",
+                    "primary-container": "#d97757",
+                    "inverse-primary": "#ffb59e",
+                    "on-surface-variant": "#55433d",
+                    "surface-container-highest": "#e7e2db",
+                    "surface-container": "#f2ede6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1d1b17",
+                    "on-secondary-fixed-variant": "#6f371e",
+                    "on-secondary-fixed": "#360f00",
+                    "inverse-on-surface": "#f5f0e9",
+                    "secondary-container": "#feae8c",
+                    "tertiary": "#6f5a4e",
+                    "background": "#fef9f2",
+                    "on-primary-fixed": "#390b00",
+                    "on-tertiary-fixed-variant": "#564338",
+                    "surface-dim": "#ded9d3",
+                    "on-primary-container": "#541400",
+                    "surface-bright": "#fef9f2",
+                    "surface": "#fef9f2",
+                    "primary": "#99462a",
+                    "surface-container-high": "#ece7e1",
+                    "tertiary-fixed-dim": "#dcc1b3",
+                    "secondary": "#8c4e33",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1d1b17",
+                    "secondary-fixed": "#ffdbcd",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#793f25",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#f9ddce"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "container-max": "1120px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fef9f2;
+            color: #1d1b17;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background selection:bg-primary-fixed-dim selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-50 bg-background border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop h-20 flex justify-between items-center">
+<div class="flex items-center gap-unit cursor-pointer active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary text-[32px]">menu_book</span>
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface">LUME</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-lg text-label-lg text-primary font-medium hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Archive</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Culture</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">search</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">bookmarks</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop pt-24 pb-section-gap">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto space-y-6">
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-widest">Editorial Series 2024</span>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tighter">The quiet beauty of functional spaces.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Exploring the intersection of modern architecture, intentional living, and the subtle textures that define our everyday environments.
+                </p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-container transition-all duration-300 transform hover:-translate-y-1">
+                        Explore the Archive
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop pb-section-gap">
+<div class="relative w-full aspect-[21/9] overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A serene and minimalist interior space featuring a single mid-century modern wooden chair beside a large window. Soft, golden hour sunlight pours across a polished concrete floor, creating long, artistic shadows. The walls are a warm off-white, and the overall atmosphere is one of profound silence and architectural elegance, reflecting a high-end editorial aesthetic with a warm, earthy color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbltdHksMK7l6XW-SZDKFWAuQLEjRkDxN_M79nbQNw931AS53ZMGV4xFgHgPnLdq6K_RajPFOF6lMHYNKlC_5QtopoA1QrOiZyI4jc_NRdakNbUmLkMRxzvym58AZTdpzbEw5xUm58_8Ysii2QcQcFlJQqxt--W3NH9hUX2nhcViakNtsW3q_HB-SK4f06bWBtOewsO1jeaOCtYFTaRjpPv_6gbtv1Lqi-28qd_rjOAHcYWEEyV0ORA_BsWMTiWspdGvaPY2nUUudT"/>
+<div class="absolute bottom-10 left-10 text-on-primary max-w-lg">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded text-label-sm font-label-sm uppercase mb-4 inline-block">Featured Cover</span>
+<h2 class="font-headline-lg text-headline-lg mb-2">Shadows &amp; Light: An Architectural Study</h2>
+<p class="font-body-md text-body-md opacity-90">How natural illumination transforms the brutalist landscape into something intimate.</p>
+</div>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop pb-section-gap">
+<div class="flex justify-between items-end mb-12 border-b border-outline-variant/30 pb-4">
+<h3 class="font-title-lg text-title-lg text-on-surface">Latest Stories</h3>
+<a class="font-label-lg text-label-lg text-primary flex items-center gap-1 group" href="#">
+                    View All <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Blog Card 1 -->
+<article class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A macro photograph of minimalist stationery and a small ceramic bowl on a light oak wood surface. The lighting is diffused and soft, highlighting the natural textures of the paper and wood. The color palette is composed of warm beiges, soft creams, and subtle terracotta accents, evoking a sense of calm, organized creativity in a quiet studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQu6c1GySJuuy3YzCyG3ZrbZk3v5XWHall5eDzL8aTU8S-G27xafP3dV4Ha0Swqg5qI7sEaziL4_I-xk9738WI6xkMcl_Cz1IWJXPvILEza-oBTEPmyht9SC97DnHpLIFSySsP7a0rhSXIdJvwhsjVkR0DpmswEAo4zKhRWNBiJEExgDr-9aPw6ImpcY8-IHWg6KPWav-yOd7l9q21EN07m7ww6SyU7rvP_Pd4t0-akP7zJnCF5MDs-px4c7v8UfPqdBi-E1FSlGXa"/>
+</div>
+<div class="bg-surface-container p-8 rounded-xl h-full flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-3">Design</span>
+<h4 class="font-headline-lg text-[24px] text-on-surface leading-tight mb-4 flex-grow group-hover:text-primary transition-colors">The Art of the Minimalist Workspace</h4>
+<a class="font-label-lg text-label-lg text-primary border-b border-primary/20 pb-1 w-fit group-hover:border-primary transition-colors" href="#">Read Article</a>
+</div>
+</article>
+<!-- Blog Card 2 -->
+<article class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern architectural details of a spiraling white staircase inside a contemporary art museum. The composition is clean and geometric, using high-contrast lighting to emphasize the fluid curves of the structure. The overall aesthetic is ultra-minimalist, with a focus on form, space, and a pristine white color palette that feels airy and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaypZLU8IKU9jB0_OiAlquKQWc6GcbMRf8eU3KmfHB-blLLm4ZW4l478DWuP7yb6WEWBFehP1o6VKI-fOoaihDvG-q_On_Y_3jMww_3VfuXgm5T1EzZbNi6PJ_-JyeVbP4fc8bWu9z_kyls2YKA33dfD3pSGA4zmCQD5GlbKTpeEu7DCMsBkJ-V7d7UJ_xVAmjp2sm0iqi4lCp1xhcuOxAMgsoDm_S40GPmXHDEPrQ-d59yYtk655ZKCfW25wxDAM1PQjm8GI7-eKf"/>
+</div>
+<div class="bg-surface-container p-8 rounded-xl h-full flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-3">Architecture</span>
+<h4 class="font-headline-lg text-[24px] text-on-surface leading-tight mb-4 flex-grow group-hover:text-primary transition-colors">Spirals and Silence in Modern Museums</h4>
+<a class="font-label-lg text-label-lg text-primary border-b border-primary/20 pb-1 w-fit group-hover:border-primary transition-colors" href="#">Read Article</a>
+</div>
+</article>
+<!-- Blog Card 3 -->
+<article class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up shot of a hand-crafted ceramic vase with a rough, organic texture holding a single dried branch. The background is a flat, matte clay wall in a soft terracotta shade. The scene is illuminated by gentle side-lighting, creating a moody yet warm atmosphere that emphasizes the beauty of wabi-sabi and natural imperfection in interior styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClSgI5eh5RzTjqcr05UEDV5n4q0f8DgWCda-MDyTyIAK6qSh_CCmcAyZQVAawSSy1RNfc78ieeXzTQpZj171DhYmZ_EVtBImnSOT_6onzsnwywzozU8scGKBrBuhM4QuKMAo_fXOBatyFknzHnPVWVZGVYLpWOaRbLH7TearxksNdCVBYCKD44bU1cKKnU7DLeNv6a4w9-pHESTH0V6WqDFXnzAsFj5m-se9OC-swDBznKTcI3cwfOKk9ufLxivKda0XkoUbbo-v3O"/>
+</div>
+<div class="bg-surface-container p-8 rounded-xl h-full flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-3">Lifestyle</span>
+<h4 class="font-headline-lg text-[24px] text-on-surface leading-tight mb-4 flex-grow group-hover:text-primary transition-colors">Wabi-Sabi: Finding Peace in Imperfection</h4>
+<a class="font-label-lg text-label-lg text-primary border-b border-primary/20 pb-1 w-fit group-hover:border-primary transition-colors" href="#">Read Article</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-surface-container-high py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-[48px] mb-6">mail</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">The Weekly Edit</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">
+                        Join 15,000+ readers who receive our curated selection of architecture, design, and slow living insights every Sunday morning.
+                    </p>
+<form class="w-full flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-background border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary/20 font-body-md" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-label-lg text-label-lg hover:bg-on-primary-container transition-all duration-300" type="submit">
+                            Subscribe
+                        </button>
+</form>
+<p class="mt-4 text-[12px] text-outline font-label-sm">No spam, just inspiration. Unsubscribe anytime.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-background border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-unit">
+<span class="font-title-lg text-title-lg text-on-surface font-bold tracking-tighter">LUME</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-tertiary-fixed-variant">© 2024 Lume Editorial. All rights reserved.</p>
+</div>
+<div class="flex gap-10">
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">Privacy</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 ease-in-out" href="#">Archive</a>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for smooth scrolling or hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky header transition
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-background/95', 'backdrop-blur-md');
+            } else {
+                nav.classList.remove('bg-background/95', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body></html>

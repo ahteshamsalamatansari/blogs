@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .reading-container {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -2px rgba(217, 119, 87, 0.08);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#a58d80",
+                        "surface-variant": "#e7e2db",
+                        "on-tertiary-fixed": "#27180f",
+                        "surface-container-low": "#f8f3ec",
+                        "outline-variant": "#dbc1b9",
+                        "inverse-surface": "#32302c",
+                        "surface-tint": "#99462a",
+                        "secondary-fixed-dim": "#ffb596",
+                        "primary-fixed": "#ffdbd0",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#7a2f15",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#37271d",
+                        "primary-fixed-dim": "#ffb59e",
+                        "outline": "#88726c",
+                        "primary-container": "#d97757",
+                        "inverse-primary": "#ffb59e",
+                        "on-surface-variant": "#55433d",
+                        "surface-container-highest": "#e7e2db",
+                        "surface-container": "#f2ede6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1d1b17",
+                        "on-secondary-fixed-variant": "#6f371e",
+                        "on-secondary-fixed": "#360f00",
+                        "inverse-on-surface": "#f5f0e9",
+                        "secondary-container": "#feae8c",
+                        "tertiary": "#6f5a4e",
+                        "background": "#fef9f2",
+                        "on-primary-fixed": "#390b00",
+                        "on-tertiary-fixed-variant": "#564338",
+                        "surface-dim": "#ded9d3",
+                        "on-primary-container": "#541400",
+                        "surface-bright": "#fef9f2",
+                        "surface": "#fef9f2",
+                        "primary": "#99462a",
+                        "surface-container-high": "#ece7e1",
+                        "tertiary-fixed-dim": "#dcc1b3",
+                        "secondary": "#8c4e33",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1d1b17",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#793f25",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#f9ddce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1120px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-background border-b border-outline-variant/30 backdrop-blur-md bg-opacity-90">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface">LUME</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-lg text-label-lg text-primary font-medium hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Archive</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Essays</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-icon="search">search</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Article Header Section -->
+<section class="pt-16 pb-12 px-margin-mobile md:px-margin-desktop bg-surface-container-low/50">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col items-center text-center">
+<a class="group flex items-center gap-2 mb-8 text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_back">arrow_back</span>
+<span class="font-label-lg text-label-lg">Back to Articles</span>
+</a>
+<div class="mb-6">
+<span class="px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed text-label-lg font-bold rounded-full tracking-widest uppercase text-[10px]">Architecture &amp; Philosophy</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[64px] leading-tight mb-8 text-on-surface max-w-[840px]">The Soul of Space: Architecture as a Silent Dialogue</h1>
+<div class="flex items-center justify-center gap-6 border-t border-b border-outline-variant/20 py-6 w-full max-w-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container overflow-hidden">
+<img alt="Author" data-alt="A professional close-up portrait of a thoughtful male architectural writer in his late 40s with subtle graying hair and designer glasses. The lighting is soft, natural, and warm, emanating from a large window. He is wearing a minimalist linen shirt in a warm cream tone, perfectly matching the Lume editorial aesthetic. The background is a blurred, bright minimalist studio with architectural sketches." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2sxWzCblY2nwifeObIP0vXy_Q8e0FvgqfJVWRNV-EZm7MFh8nMN951UwidNb0BXBlob9vLdOUPay7m10MKVnFErPL8kONhSdytXHBm6AHP2DeqlrMKYAar1Qa0wQJoUeaWTMpwtSSE6UBYTTIiPDjLpoR62Q7ahf0kzpnDw2L8qH6KCgiXf7sZqk6nPWYoiSabN66KwlKRCKcKDfPVKfyWnewYiR8uIFflD240LCMo9PLDHD9khfgctkEWhAt-5xUeyBKDIDUyMck"/>
+</div>
+<div class="text-left">
+<p class="font-label-lg text-label-lg text-on-surface">Julian Thorne</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Lead Editor</p>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="text-left">
+<p class="font-label-lg text-label-lg text-on-surface">October 24, 2024</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">12 min read</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Image -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="max-w-container-max mx-auto overflow-hidden rounded-xl bg-surface-container shadow-sm">
+<img class="w-full h-[600px] object-cover" data-alt="A breathtaking wide shot of a minimalist concrete building with sharp, clean geometric lines set against a serene desert landscape at golden hour. The architecture features large spans of floor-to-ceiling glass that reflect the warm orange and soft purple sky. The overall tone is calm, sophisticated, and ultra-minimalist, using a warm-skewing color palette of terracotta, sandstone, and muted grays. High-quality architectural photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7QTk_WAN9JH2fbZ2MmWiIAgjyj6-xA5qFoX5k4BrULN-NlU8npL3MZ4mbnv1nu6rYuEXmZt0qDJbVNdYzt4IRqXXo2D2EA_17AvUaHhAWzRm4zVsiLpZ1_xPB_QE9p46EQPbhMyx7jOTW6vEaASEdQSunauOInGD1bG6w07bBm32pddKscEo316DbBMidRVnKdfPpNrsxmSjBXW6jQ_TaWia362QSr7LXylN3k83ep2Zku-8g8_NhuHYwSmi2LV73Ke3gyzA6RvTI"/>
+</div>
+</section>
+<!-- Article Body -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap bg-[#FBF8F4]">
+<div class="reading-container py-12">
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-8 leading-[1.8]">
+<p class="first-letter:text-7xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 first-letter:float-left">W</p>
+<p>When we speak of architecture, we often find ourselves caught in the tangibility of materials—the cold precision of steel, the grounding weight of concrete, the organic warmth of cedar. Yet, the true essence of a structure lies not in what is built, but in the void it carves out of the world. Space is not an absence; it is a medium, a silent dialogue between the human spirit and the physical environment.</p>
+<p>Minimalism, in its purest form, is not about the removal of things. It is about the curation of clarity. In 'The Soul of Space', we explore how modern architects are shifting their focus from the facade to the feeling. It is a transition from architecture as an object to architecture as an experience. A single beam of light falling across a textured wall can communicate more about the passage of time than any clock ever could.</p>
+<!-- Blockquote -->
+<blockquote class="my-16 pl-8 border-l-4 border-primary py-4">
+<p class="font-title-lg text-title-lg italic text-on-surface leading-relaxed">
+                            "Architecture should speak of its time and place, but yearn for timelessness. A room is not merely four walls; it is a vessel for the light of the soul."
+                        </p>
+<footer class="mt-4 font-label-lg text-label-lg text-primary">— Tadao Ando</footer>
+</blockquote>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-16 mb-6">The Geometry of Silence</h2>
+<p>In the noise of the 21st century, silence has become the ultimate luxury. Architects like Peter Zumthor and John Pawson have mastered the art of building silence. By using a restrained palette of materials and focusing on the rhythmic placement of openings, they create spaces that encourage introspection. These are buildings that don't shout for attention; they wait to be discovered.</p>
+<div class="my-12 overflow-hidden rounded-lg">
+<img class="w-full aspect-[16/9] object-cover" data-alt="A minimalist interior hallway showcasing the interaction of light and shadow. The walls are finished in a soft-textured warm plaster. A single slit in the ceiling allows a sharp, diagonal ray of sunlight to cut across the floor. The space is empty, emphasizing the rhythmic patterns created by the light. The color palette is composed of warm sand tones and deep amber shadows, conveying a sense of quiet focus and literary elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVXG6ZgG7CbaDauDz2n-xZgs3awzmygVP5seM_P7xN9z3OD87n20tLiA_DWUelLIOhpDo6VsU5sBwaLhrQGwG1eNxqaEXSe3cBCFasRV5_bLbt4Z8kM-RCJU4CeQZuzozjQPqbcI5hAp2J2EJkyuKY1ZEs-u-iIywicTBNgHipyQbVopLgu1gCgrmyZJ-dUtoE-sd-pauyvoZaMa7ECwqLZmwqx0DCpQDz7rp28f7B1PZ_XwPCZomLc7RUgbg264Jv1wv4eczJKG3i"/>
+<p class="mt-4 text-center font-label-sm text-label-sm italic text-on-surface-variant">The interplay of natural light in the modern atrium. Photography by ArchiVision.</p>
+</div>
+<p>Consider the way we move through a space. A narrow corridor that opens into a soaring, double-height library creates a physical sensation of release. This emotional manipulation—through scale, light, and shadow—is the true work of the architect. It is the invisible hand that guides our mood and dictates our pace.</p>
+</div>
+<!-- Tags Section -->
+<div class="mt-20 pt-8 border-t border-outline-variant/30 flex flex-wrap gap-3">
+<span class="text-on-tertiary-fixed-variant font-label-lg text-label-lg mr-4 flex items-center">
+<span class="material-symbols-outlined mr-2" data-icon="sell">sell</span> Tags:
+                    </span>
+<a class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded hover:bg-primary-fixed transition-colors duration-200" href="#">Minimalism</a>
+<a class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded hover:bg-primary-fixed transition-colors duration-200" href="#">Modernism</a>
+<a class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded hover:bg-primary-fixed transition-colors duration-200" href="#">Space</a>
+<a class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant font-medium rounded hover:bg-primary-fixed transition-colors duration-200" href="#">Light</a>
+</div>
+</div>
+</section>
+<!-- Continue Reading Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<p class="font-label-lg text-label-lg text-primary uppercase tracking-[0.2em] mb-2">Editorial</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Continue Reading</h3>
+</div>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary flex items-center gap-2 transition-all" href="#">
+                        View Archive <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-2 gap-10">
+<!-- Related Article 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 editorial-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist cityscape featuring a glass skyscraper reflecting a clear blue morning sky. The architectural lines are sharp and vertical, creating a sense of upward momentum. The lighting is crisp and high-key, emphasizing a light-mode aesthetic. The color palette is dominated by cool blues and pristine whites, offset by subtle warm reflections. The mood is professional and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-Wzb5ow8L41va_rJHGPjSpKKZX0Q9UHg_-A-f-2mIH5SoLUmGTWXyXaGGjh0JLia5ZNc6gn6DZXoo1Fx01QdTcQBWxKLcwpIVwODOuanLg5CHGb7R8GK5928eZJRkksc9eM5Lvzx90i6KaueXWBvADYDZmYRrdlg3vI74DddbEqV9cIKSfDXLoj8XFm91Cd9u09GsLAvxdNPRUTsZOWrbOzpq4HWvsTmYPcKohDMqzFdm5fE1x7R1MMWB3za0Rb_2B26nAqEf3VI"/>
+</div>
+<p class="font-label-sm text-label-sm text-primary mb-3 uppercase tracking-wider">Urbanism</p>
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors duration-300 mb-3">Concrete Jungles: The New Green</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">How vertical forests and sustainable planning are redefining the urban sprawl of the future.</p>
+</article>
+<!-- Related Article 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 editorial-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An expansive, high-end minimalist office space with blonde wood floors and white walls. There are no cubicles, only long, clean communal tables and sculptural ergonomic chairs. Large windows reveal a lush green garden outside. The space is filled with soft, diffused daylight. The aesthetic is extremely clean, peaceful, and productive, utilizing the warm Lume color palette of light wood and cream." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_n6IVyNFmGms1ZkfMvrdlCNaBRimctLbbrjgDJZqOp9qIXlr0gWQowfYx1HTWwK87rOkRZEOrU-Wzw9dLXtcSUbTa7CQPo0i_JHWavjIf6y7KTYZitxUxVNDcXcTTwj3nCueHhZ8gwEKhC9oEiDTD4Aszv0bOQUXU2Y6ig2zWMSFrUQQ6dWVYazBmR4zEMAyd2ebAp_EK4SHOn-M0rlBHZoR3dvPgP5QDMCHxy698GqR6kStFA8FeuN5oD2EbVVNpHgwDC_P8hytQ"/>
+</div>
+<p class="font-label-sm text-label-sm text-primary mb-3 uppercase tracking-wider">Workplace</p>
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors duration-300 mb-3">The Office After the End</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Reimagining the communal workspace as a hub for creativity and human connection rather than just productivity.</p>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-outline-variant/20 w-full py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-title-lg text-title-lg text-on-surface font-bold tracking-tighter">LUME</span>
+<p class="font-label-lg text-label-lg text-on-tertiary-fixed-variant">© 2024 Lume Editorial. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Privacy</a>
+<a class="font-label-lg text-label-lg text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Archive</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            // Potentially add a progress bar if needed
+        });
+
+        // Micro-interaction for images
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.opacity = '0.95';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.opacity = '1';
+            });
+        });
+    </script>
+</body></html>

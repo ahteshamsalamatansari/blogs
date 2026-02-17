@@ -1,0 +1,69 @@
+---
+title: "Your Article Title Goes Here: Keep it Clear and Catchy"
+subtitle: "A short, engaging subtitle summarizing the core message of the essay."
+date: "YYYY-MM-DD"
+excerpt: "A brief excerpt (1-2 sentences) used in the blog listing cards and search descriptions."
+tags: ["AI", "Engineering", "Design"]
+coverImage: "/image-1.png" # Path to your image inside the /public directory (e.g. /image-2.png)
+authorName: "Ahtesham Ansari"
+authorRole: "AI Engineer"
+authorImage: "" # Leave blank to use the default SVG user avatar
+---
+
+Introduce your article here. Write a compelling introduction paragraph that catches the reader's attention. This section uses Plus Jakarta Sans typography with line heights optimized for long-form reading comfort (Medium-like experience).
+
+> This is an editorial pull quote. It is styled with large italicized fonts, generous padding, and a primary brand-colored left border.
+>
+> — Tadao Ando
+
+## Section Heading (H2)
+
+This is a paragraph under a main section heading. You can format text using standard markdown utilities:
+* **Bold text** to emphasize key concepts.
+* *Italic text* for subtle emphasis or citations.
+* `inline code` for variable names, APIs, or terminal commands.
+* [Hyperlinks](https://example.com) to link to external references.
+
+### Subsection Heading (H3)
+
+Here is a bulleted list:
+* First item showing core concepts.
+* Second item highlighting design logic.
+* Third item with nested details.
+
+Here is a numbered list:
+1. First step in the setup process.
+2. Second step configuring environment variables.
+3. Third step launching the server.
+
+### Adding Code Blocks with Syntax Highlighting
+
+Wrap code blocks in triple backticks followed by the language name (e.g. `python`, `javascript`, `css`, `bash`, `json`) to trigger automatic syntax highlighting:
+
+```python
+import anthropic
+
+client = anthropic.Anthropic()
+
+# Trigger an execution block
+response = client.messages.create(
+    model="claude-opus-4-8",
+    max_tokens=1000,
+    messages=[
+        {"role": "user", "content": "Hello, Claude!"}
+    ]
+)
+print(response.content[0].text)
+```
+
+*Note: Hovering over the code block in the article will reveal a floating "Copy" button in the top-right corner.*
+
+### Adding Tables
+
+You can create standard markdown tables:
+
+| Column Heading A | Column Heading B |
+| :--- | :--- |
+| Row 1, Cell A | Row 1, Cell B |
+| Row 2, Cell A | Row 2, Cell B |
+| Row 3, Cell A | Row 3, Cell B |

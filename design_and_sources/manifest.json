@@ -1,0 +1,21 @@
+{
+  "name": "Ahtesham Blog",
+  "short_name": "Ahtesham",
+  "description": "An ultra-minimalist blog and portfolio exploring AI and engineering.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F1EA",
+  "theme_color": "#D97757",
+  "icons": [
+    {
+      "src": "{{DATA:IMAGE:IMAGE_GENERATED_FAVICON}}",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "{{DATA:IMAGE:IMAGE_GENERATED_APPLE_ICON}}",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
