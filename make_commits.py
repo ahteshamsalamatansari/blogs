@@ -7,7 +7,7 @@ print("Configuring git user credentials...")
 try:
     subprocess.run(["git", "config", "user.email", "rdxahteshamsalamat@outlook.com"], check=True)
     subprocess.run(["git", "config", "user.name", "ahteshamsalamatansari"], check=True)
-    print("✓ Git credentials configured successfully.")
+    print("[OK] Git credentials configured successfully.")
 except Exception as e:
     print(f"Error configuring Git credentials: {e}")
 
@@ -15,7 +15,7 @@ except Exception as e:
 if not os.path.exists(".git"):
     print("Initializing Git repository...")
     subprocess.run(["git", "init"], check=True)
-    print("✓ Git repository initialized.")
+    print("[OK] Git repository initialized.")
 
 # Stage current files if any
 print("Staging current files for initial setup...")
@@ -31,7 +31,7 @@ if result.returncode != 0:
     env["GIT_AUTHOR_DATE"] = initial_date
     env["GIT_COMMITTER_DATE"] = initial_date
     subprocess.run(["git", "commit", "-m", "Initial commit: bootstrap Next.js editorial brand blog"], env=env, check=True)
-    print("✓ Initial commit created.")
+    print("[OK] Initial commit created.")
 
 # File to modify for history generation
 history_file = "history_log.txt"
@@ -74,5 +74,5 @@ for i in range(100):
     # Commit
     subprocess.run(["git", "commit", "-m", msg], env=env, check=True)
 
-print("\n✓ Successfully generated 100 historic Git commits!")
+print("\n[OK] Successfully generated 100 historic Git commits!")
 print("Run 'git log --oneline' to view your generated commit tree.")
