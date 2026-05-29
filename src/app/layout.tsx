@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -11,11 +11,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ahtesham | Editorial Minimalist Blog",
+  title: "Ahtesham Salamat Ansari | Minimalist Blog",
   description: "An ultra-minimalist blog and portfolio exploring generative AI, architecture, design, and technical engineering.",
   metadataBase: new URL("https://ahtesham-blog.vercel.app"),
   openGraph: {
-    title: "Ahtesham | Editorial Minimalist Blog",
+    title: "Ahtesham Salamat Ansari | Minimalist Blog",
     description: "An ultra-minimalist blog and portfolio exploring generative AI, architecture, design, and technical engineering.",
     type: "website",
   },
@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

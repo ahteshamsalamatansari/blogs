@@ -16,12 +16,12 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 md:pt-24 pb-12 md:pb-16 text-center">
-        <div className="flex flex-col items-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-on-surface tracking-tighter leading-tight font-sans">
+      <section className="w-full max-w-container-max mx-auto px-margin-mobile sm:px-8 lg:px-margin-desktop pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-14 lg:pb-16 text-center">
+        <div className="flex flex-col items-center max-w-5xl mx-auto space-y-5 sm:space-y-6">
+          <h1 className="w-full max-w-4xl text-[1.28rem] sm:text-[1.55rem] md:text-[1.9rem] lg:text-[2.2rem] xl:text-[2.4rem] font-bold text-on-surface leading-[1.18] font-sans break-words">
             Ideas, systems, technology, business, and the scattered observations collected while building things on the internet.
           </h1>
-          <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+          <p className="w-full max-w-3xl text-[0.95rem] sm:text-base lg:text-lg text-on-surface-variant leading-relaxed break-words">
             Exploring engineering, AI, design, startups, workflows, digital culture, and the strange mechanics behind modern work and online life.
           </p>
           <div className="pt-4">
@@ -37,24 +37,24 @@ export default function Home() {
 
       {/* Featured Cover Section */}
       {featuredPost && (
-        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-16">
+        <section className="w-full max-w-container-max mx-auto px-margin-mobile sm:px-8 lg:px-margin-desktop pb-12 sm:pb-16">
           <Link href={`/blog/${featuredPost.slug}`} className="block group">
-            <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-xl bg-surface-container shadow-sm">
+            <div className="relative w-full min-h-[280px] aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-xl bg-surface-container shadow-sm">
               <img 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" 
                 src={featuredPost.coverImage} 
                 alt={featuredPost.title} 
               />
               {/* Overlay with gradient for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-6 md:p-12">
-                <div className="text-white max-w-xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-5 sm:p-6 md:p-12">
+                <div className="min-w-0 text-white max-w-xl">
                   <span className="bg-primary/95 text-on-primary px-3 py-1 rounded text-[11px] font-semibold uppercase tracking-widest mb-4 inline-block select-none">
                     Featured Cover
                   </span>
-                  <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-2 group-hover:text-primary-container transition-colors font-sans">
+                  <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 group-hover:text-primary-container transition-colors font-sans break-words">
                     {featuredPost.title}
                   </h2>
-                  <p className="text-sm md:text-base opacity-90 font-sans line-clamp-2">
+                  <p className="text-xs sm:text-sm md:text-base opacity-90 font-sans line-clamp-2 break-words">
                     {featuredPost.subtitle}
                   </p>
                 </div>
@@ -65,8 +65,8 @@ export default function Home() {
       )}
 
       {/* Article Grid */}
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24">
-        <div className="flex justify-between items-end mb-12 border-b border-outline-variant/30 pb-4">
+      <section className="w-full max-w-container-max mx-auto px-margin-mobile sm:px-8 lg:px-margin-desktop pb-20 sm:pb-24">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-10 sm:mb-12 border-b border-outline-variant/30 pb-4">
           <h3 className="text-xl md:text-2xl font-bold text-on-surface font-sans">Latest Stories</h3>
           <Link 
             href="/blog" 

@@ -53,13 +53,19 @@
   --spacing-gutter: 24px;
   --spacing-unit: 8px;
   --spacing-margin-desktop: 64px;
-  --spacing-container-max: 1120px;
+  --spacing-container-max: 1600px;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-on-background);
   -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .material-symbols-outlined {
@@ -206,4 +212,3 @@ pre[class*="language-"] {
 .token.italic {
   font-style: italic;
 }
-
