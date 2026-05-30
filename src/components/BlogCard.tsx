@@ -5,11 +5,12 @@ import { BlogPost } from '@/lib/mdx';
 
 interface BlogCardProps {
   post: BlogPost;
+  useMainImage?: boolean;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post, useMainImage = false }: BlogCardProps) {
   const primaryTag = post.tags && post.tags.length > 0 ? post.tags[0] : 'General';
-  const displayImage = post.thumbnailImage || post.coverImage;
+  const displayImage = useMainImage ? post.coverImage : (post.thumbnailImage || post.coverImage);
   
   return (
     <Link 
@@ -20,9 +21,9 @@ export default function BlogCard({ post }: BlogCardProps) {
         {/* Cover Image Container */}
         <div className="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden shrink-0">
           {displayImage ? (
-            <img 
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              src={displayImage} 
+            <img
+              className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+              src={displayImage}
               alt={post.title}
               loading="lazy"
             />
