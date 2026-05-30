@@ -39,9 +39,9 @@ export default function Home() {
       {featuredPost && (
         <section className="w-full max-w-container-max mx-auto px-margin-mobile sm:px-8 lg:px-margin-desktop pb-12 sm:pb-16">
           <Link href={`/blog/${featuredPost.slug}`} className="block group">
-            <div className="relative w-full min-h-[280px] aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-xl bg-surface-container shadow-sm">
+            <div className="relative w-full overflow-hidden rounded-xl bg-surface-container shadow-sm">
               <img
-                className="absolute inset-0 w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-700"
+                className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700"
                 src={featuredPost.coverImage}
                 alt={featuredPost.title}
               />

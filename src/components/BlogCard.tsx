@@ -19,16 +19,16 @@ export default function BlogCard({ post, useMainImage = false }: BlogCardProps) 
     >
       <article className="flex flex-col h-full">
         {/* Cover Image Container */}
-        <div className="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden shrink-0">
+        <div className="w-full bg-surface-container-high overflow-hidden shrink-0">
           {displayImage ? (
             <img
-              className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-auto block group-hover:scale-105 transition-transform duration-700"
               src={displayImage}
               alt={post.title}
               loading="lazy"
             />
           ) : (
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex items-center justify-center h-48">
               <span className="material-symbols-outlined text-outline text-[48px]">image</span>
             </div>
           )}

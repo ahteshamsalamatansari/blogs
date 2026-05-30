@@ -97,11 +97,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Featured Cover Image */}
       {post.coverImage && (
         <section className="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
-          <div className="relative w-full aspect-[16/9] md:h-[500px] overflow-hidden rounded-xl bg-surface-container shadow-sm mx-auto">
-            <img 
-              className="absolute inset-0 w-full h-full object-cover" 
-              src={post.coverImage} 
-              alt={post.title} 
+          <div className="w-full overflow-hidden rounded-xl bg-surface-container shadow-sm mx-auto">
+            <img
+              className="w-full h-auto block"
+              src={post.coverImage}
+              alt={post.title}
             />
           </div>
         </section>
@@ -183,11 +183,11 @@ export default async function BlogPostPage({ params }: PageProps) {
               {relatedPosts.map((relatedPost) => (
                 <article key={relatedPost.slug} className="group cursor-pointer">
                   <Link href={`/blog/${relatedPost.slug}`}>
-                    <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container shadow-sm">
-                      <img 
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                        src={relatedPost.thumbnailImage || relatedPost.coverImage} 
-                        alt={relatedPost.title} 
+                    <div className="w-full overflow-hidden rounded-xl mb-6 bg-surface-container shadow-sm">
+                      <img
+                        className="w-full h-auto block group-hover:scale-105 transition-transform duration-700"
+                        src={relatedPost.thumbnailImage || relatedPost.coverImage}
+                        alt={relatedPost.title}
                       />
                     </div>
                     <span className="text-[11px] font-bold text-primary uppercase tracking-widest mb-2 inline-block">
