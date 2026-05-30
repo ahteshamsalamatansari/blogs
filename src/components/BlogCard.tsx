@@ -9,6 +9,7 @@ interface BlogCardProps {
 
 export default function BlogCard({ post }: BlogCardProps) {
   const primaryTag = post.tags && post.tags.length > 0 ? post.tags[0] : 'General';
+  const displayImage = post.thumbnailImage || post.coverImage;
   
   return (
     <Link 
@@ -18,10 +19,10 @@ export default function BlogCard({ post }: BlogCardProps) {
       <article className="flex flex-col h-full">
         {/* Cover Image Container */}
         <div className="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden shrink-0">
-          {post.coverImage ? (
+          {displayImage ? (
             <img 
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              src={post.coverImage} 
+              src={displayImage} 
               alt={post.title}
               loading="lazy"
             />

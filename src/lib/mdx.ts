@@ -11,6 +11,7 @@ export interface BlogPostFrontmatter {
   excerpt: string;
   tags: string[];
   coverImage: string;
+  thumbnailImage?: string;
   authorName?: string;
   authorRole?: string;
   authorImage?: string;
@@ -63,8 +64,9 @@ export function getBlogPosts(): BlogPost[] {
         excerpt: frontmatter.excerpt || '',
         tags: frontmatter.tags || [],
         coverImage: frontmatter.coverImage || '',
-        authorName: frontmatter.authorName || 'Julian Thorne',
-        authorRole: frontmatter.authorRole || 'Lead Editor',
+        thumbnailImage: frontmatter.thumbnailImage || '',
+        authorName: frontmatter.authorName || 'Ahtesham Ansari',
+        authorRole: frontmatter.authorRole || 'AI Engineer',
         authorImage: frontmatter.authorImage || '',
       };
     });
@@ -103,8 +105,9 @@ export function getBlogPost(slug: string): BlogPost | null {
     excerpt: frontmatter.excerpt || '',
     tags: frontmatter.tags || [],
     coverImage: frontmatter.coverImage || '',
-    authorName: frontmatter.authorName || 'Julian Thorne',
-    authorRole: frontmatter.authorRole || 'Lead Editor',
+    thumbnailImage: frontmatter.thumbnailImage || '',
+    authorName: frontmatter.authorName || 'Ahtesham Ansari',
+    authorRole: frontmatter.authorRole || 'AI Engineer',
     authorImage: frontmatter.authorImage || '',
   };
 }
